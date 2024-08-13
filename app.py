@@ -15,7 +15,7 @@ from sklearn.linear_model import LinearRegression
 
 #para usar o prophet
 import logging
-from prophet import Prophet
+from prophet import prophet
 
 
 #import joblib 
