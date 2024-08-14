@@ -105,6 +105,7 @@ with st.container():
         st.write("Fonte: https://passosmagicos.org.br/")
 
 dados = pd.read_csv('df_final_passos.csv', sep=',')
+dados = pd.DataFrame(dados)
 
 st.write("")
 st.subheader("", divider="orange")
