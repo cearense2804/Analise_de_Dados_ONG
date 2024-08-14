@@ -63,7 +63,7 @@ with col3:
 with col4:
     st.write("")
 with col5:
-    st.image('IMG_passos_magicos.png', width=1000,use_column_width=1, caption='Fonte: https://passosmagicos.org.br/')
+    st.image('IMG_passos_magicos.jpg', width=1000,use_column_width=1, caption='Fonte: https://passosmagicos.org.br/')
 with col6:
     st.write("")
 
@@ -139,9 +139,9 @@ with st.container():
         
 
     with col10:
-        st.image('IMG_inde.png', width=550,use_column_width=0.9, caption='Fonte: https://passosmagicos.org.br/')
+        st.image('IMG_inde.jpg', width=550,use_column_width=0.9, caption='Fonte: https://passosmagicos.org.br/')
         st.write(" ")
-        st.image('IMG_calculo_inde.png', width=550,use_column_width=0.9, caption='Fonte: https://passosmagicos.org.br/')
+        st.image('IMG_calculo_inde.jpg', width=550,use_column_width=0.9, caption='Fonte: https://passosmagicos.org.br/')
         st.write(" ")
 
 st.write(" ☞ O INDE é formado por 7 indicadores distribuídos nas dimensões acadêmicas, psicossocial e psicopedagógica, são eles: IAN, IDA, IEG, IAA, IPS, IPP e IPV. Observamos no gráfico acima a disposição dos valores de INDE obtidos pelos alunos nos anos de 2020 a 2022 e podemos perceber que houve uma quantidade relevante de notas abaixo da média geral, o que é um idicativo da necessidade de empreender esforços para a melhoria do indicador nos anos subsequentes.")
