@@ -525,62 +525,65 @@ def analise_aluno(num):
     st.write(" ")
     st.write(" ")
     id_aluno = num
-    with st.container():
-        st.write(" ")
-        st.markdown(f'<p class="media-font">▪ Previsões para o Aluno ID {num}:</p>', unsafe_allow_html=True)
-        st.write(" ")
-        col1, col2 = st.columns([4,6])
-        with col1:
-            #prevendo o incremento dos indicadores do aluno
-            
-            fig8 = plt.figure(figsize=(5,4))
-            
-            df =  pd.DataFrame(dados[['nome','ano','iaa','ieg','ips','ida','ipp','ipv','ian','inde']])
-            df = df.set_index('nome')
-            df.columns = ['ano','IAA','IEG','IPS','IDA','IPP','IPV','IAN','INDE']
-            df_aluno = pd.DataFrame(df.loc[df.index == num])
-            #df_aluno = df[df['nome'] == id_aluno][['ano','iaa', 'ieg', 'ips', 'ida', 'ipp','ipv', 'ian', 'inde']]
-            df_sem_ano = df_aluno[['IAA','IEG','IPS','IDA','IPP','IPV','IAN','INDE']]
-            colunas = df_sem_ano.columns.tolist()
-
-            lista_inc = []
-
-            for col in colunas:
-                # Criar um modelo de regressão linear
-                model = LinearRegression()
-
-                # Preparar os dados para regressão
-                X = df_aluno['ano'].values.reshape(-1, 1)
-                y = df_sem_ano[col].values.reshape(-1, 1)
-
-                # Ajuste o modelo
-                model.fit(X, y)
-
-                # O coeficiente de 'ANO' em nosso modelo nos dirá a taxa de incremento por ano
-                coef_increment_per_year = model.coef_[0][0]
-                
-                x = coef_increment_per_year.round(2)
-                lista_inc.append(x)
-
-            def cor_da_barra(lista_inc: float) -> str:
-                cor=[]
-                for i in range(len(colunas)):
-                    if lista_inc[i] > 0:
-                        cor.append('lightblue')
-                    else:
-                        cor.append("#FA8072")
-                return cor
-            palette = cor_da_barra(lista_inc)
-            sns.barplot(x = colunas, y =lista_inc, palette=palette)
-            plt.axhline(y=0, color= 'gray')
-            plt.title(f'Previsão de Incremento dos Indicadores do Aluno ID{num}', fontsize=10)
-            st.pyplot(fig8)
-        with col2:
-            st.write(" ")
-            st.write(" ")
-            st.write(" ")
-            st.write(" ")
-            st.write(f"☞  No gráfico ao lado, podemos visualizar a previsão de incremento dos indicadores do PEDE para o aluno ID {id_aluno}. A partir dessa percepção indicativa, poderemos traçar rotas alternativas que viabilizem a melhora individualiza do aluno, bem como evitar que um possível decréscimo  dos índices ocorra. Pelo fato de indicador possuir atributos definidos e determinados para a sua ponderação, isso facilitaria o foco dos profissionais a fim de promover melhora especializada.")
+  
+    qtd_ano = len(df.ano.tolist()
+    if qtd_ano > 1:       
+      with st.container():
+          st.write(" ")
+          st.markdown(f'<p class="media-font">▪ Previsões para o Aluno ID {num}:</p>', unsafe_allow_html=True)
+          st.write(" ")
+          col1, col2 = st.columns([4,6])
+          with col1:
+              #prevendo o incremento dos indicadores do aluno
+              
+              fig8 = plt.figure(figsize=(5,4))
+              
+              df =  pd.DataFrame(dados[['nome','ano','iaa','ieg','ips','ida','ipp','ipv','ian','inde']])
+              df = df.set_index('nome')
+              df.columns = ['ano','IAA','IEG','IPS','IDA','IPP','IPV','IAN','INDE']
+              df_aluno = pd.DataFrame(df.loc[df.index == num])
+              #df_aluno = df[df['nome'] == id_aluno][['ano','iaa', 'ieg', 'ips', 'ida', 'ipp','ipv', 'ian', 'inde']]
+              df_sem_ano = df_aluno[['IAA','IEG','IPS','IDA','IPP','IPV','IAN','INDE']]
+              colunas = df_sem_ano.columns.tolist()
+  
+              lista_inc = []
+  
+              for col in colunas:
+                  # Criar um modelo de regressão linear
+                  model = LinearRegression()
+  
+                  # Preparar os dados para regressão
+                  X = df_aluno['ano'].values.reshape(-1, 1)
+                  y = df_sem_ano[col].values.reshape(-1, 1)
+  
+                  # Ajuste o modelo
+                  model.fit(X, y)
+  
+                  # O coeficiente de 'ANO' em nosso modelo nos dirá a taxa de incremento por ano
+                  coef_increment_per_year = model.coef_[0][0]
+                  
+                  x = coef_increment_per_year.round(2)
+                  lista_inc.append(x)
+  
+              def cor_da_barra(lista_inc: float) -> str:
+                  cor=[]
+                  for i in range(len(colunas)):
+                      if lista_inc[i] > 0:
+                          cor.append('lightblue')
+                      else:
+                          cor.append("#FA8072")
+                  return cor
+              palette = cor_da_barra(lista_inc)
+              sns.barplot(x = colunas, y =lista_inc, palette=palette)
+              plt.axhline(y=0, color= 'gray')
+              plt.title(f'Previsão de Incremento dos Indicadores do Aluno ID{num}', fontsize=10)
+              st.pyplot(fig8)
+          with col2:
+              st.write(" ")
+              st.write(" ")
+              st.write(" ")
+              st.write(" ")
+              st.write(f"☞  No gráfico ao lado, podemos visualizar a previsão de incremento dos indicadores do PEDE para o aluno ID {id_aluno}. A partir dessa percepção indicativa, poderemos traçar rotas alternativas que viabilizem a melhora individualiza do aluno, bem como evitar que um possível decréscimo  dos índices ocorra. Pelo fato de indicador possuir atributos definidos e determinados para a sua ponderação, isso facilitaria o foco dos profissionais a fim de promover melhora especializada.")
         
 analise_aluno(num)
 
