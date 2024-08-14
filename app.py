@@ -312,7 +312,7 @@ ax8.set_ylim(0,10)
 ax8.bar_label(ax8.containers[0], fontsize=10)
 ax8.bar_label(ax8.containers[1], fontsize=10)
 
-plt.tight_layout()
+
 st.pyplot(fig6)
 
 st.write(" ☞ O gráfico acima expõe os índices médios por ano, dispostos em grupos de bolsistas e não bolsistas. Os bolsistas apresentaram melhores pontuações no IAN, IDA, IEG e INDE, em todos os anos avaliados. Os bolsistas, em 2022, tiveram menor  IAA do que os não bolsistas. Os valores médios de IPS  dos não bolsistas foram maiores, em todo o intervalo analisado. Os índices IPP  e IPV registraram, em 2020, uma média menor para os bolsistas, contudo o mesmo não ocorreu nos anos seguintes.")
@@ -520,7 +520,7 @@ def analise_aluno(num):
     for i in range(0,len(df.index.tolist())):
         ax8.bar_label(ax8.containers[i], fontsize=10)
 
-    plt.tight_layout()
+  
     st.pyplot(fig7)
     st.write(" ")
     st.write(" ")
