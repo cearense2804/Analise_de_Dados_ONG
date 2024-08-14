@@ -14,7 +14,7 @@ from sklearn.linear_model import LinearRegression
 
 #para usar o prophet
 import logging
-logging.getLogger("prophet.plot").disabled = True
+#logging.getLogger("prophet.plot").disabled = True
 from prophet import Prophet
 
 
