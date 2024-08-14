@@ -161,12 +161,12 @@ with st.container():
         df_virada_por_ano  = pd.DataFrame(df_virada_por_ano .query('ponto_virada != "0"'))
         df_virada_por_ano  = pd.DataFrame(df_virada_por_ano .groupby(['ano','fase'])['nome'].count())
         df_virada_por_ano.columns = ['qtd_viradas']
-        fig = plt.figure(figsize=(9,6))
+        fig1 = plt.figure(figsize=(9,6))
         sns.barplot(data =df_virada_por_ano , x='fase', y='qtd_viradas',hue='ano', palette=['lightblue', 'gray', '#005A92'])
         plt.title('Análise da Quantidade de Ponto de Viradas-IPV por Fase', fontsize=14)
         plt.grid(color='lightblue', alpha=0.2)
         plt.legend(title= "PEDE- Ano")
-        st.pyplot(fig)
+        st.pyplot(fig1)
 
         st.write(" ☞ O Ponto de Virada-IPV é um  indicador muito importante na organização Passos Mágicos da dimensão psicopedagógica. Ele faz referência  a um estágio do desenvolvimento  em que o estudante demonstra de forma ativa, estar consciente da importância da educação, do valor do saber e da importância de aprender. Analisando a quantidade de alunos que obtiveram Ponto de Virada distribuídos pelas fases, observamos uma maior frequência de IPV no ano de 2022 na maioria das fases. É importante salientar que não obtivemos Ponto de Virada nas fase 8 para os anos de 2021 e 2022.")
 
@@ -269,7 +269,8 @@ with st.container():
 
 
 st.subheader('Análise dos Indicadores do PEDE por Ano')
-fig6,axes = plt.subplots(nrows=4, ncols=2, figsize=(15,9), layout="constrained")
+fig6, axes = plt.subplots(nrows=4, ncols=2, figsize=(15,9), layout="constrained")
+
 ax1 = sns.barplot(x='ano', y='ian', data=df, ax=axes[0][0], hue='bolsista',legend=False, palette=['lightblue', 'gray'])
 ax1.set_ylim(0,10)
 ax1.bar_label(ax1.containers[0], fontsize=10)
