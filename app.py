@@ -526,7 +526,7 @@ def analise_aluno(num):
     st.write(" ")
     id_aluno = num
   
-    qtd_ano = len(df.ano.tolist()
+    qtd_ano = len(df.ano.tolist())
     if qtd_ano > 1:       
       with st.container():
           st.write(" ")
