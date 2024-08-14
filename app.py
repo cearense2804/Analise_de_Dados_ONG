@@ -4,7 +4,6 @@ import pandas as pd
 import math
 import numpy as nppip
 import matplotlib.pyplot as plt
-import matplotlib.dates as mdates
 import seaborn as sns
 from datetime import datetime
 import numpy as np
@@ -19,8 +18,7 @@ logging.getLogger("prophet.plot").disabled = True
 from prophet import Prophet
 
 
-#import joblib 
-#import pickle 
+
 import time
 
 # Configurar o layout da página
