@@ -62,7 +62,7 @@ with col3:
 with col4:
     st.write("")
 with col5:
-    st.image('IMG_passos_magicos.jpg', width=1000,use_column_width=1, caption='Fonte: https://passosmagicos.org.br/')
+    st.image('IMG_passos_magicos.PNG', width=1000,use_column_width=1, caption='Fonte: https://passosmagicos.org.br/')
 with col6:
     st.write("")
 
