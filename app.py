@@ -1,4 +1,4 @@
-#bibliotecas
+P#bibliotecas
 import streamlit as st
 import pandas as pd
 import math
@@ -15,7 +15,7 @@ from sklearn.linear_model import LinearRegression
 
 #para usar o prophet
 import logging
-from prophet import prophet
+from prophet import Prophet
 
 
 #import joblib 
