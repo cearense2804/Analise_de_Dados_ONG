@@ -8,13 +8,11 @@ import seaborn as sns
 from datetime import datetime
 import numpy as np
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
-#from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 
 #para usar o prophet
 import logging
-#logging.getLogger("prophet.plot").disabled = True
 from prophet import Prophet
 
 
@@ -596,4 +594,4 @@ with st.container():
         #st.write("☞ Streamlit App: ")       
     with col22:
         st.link_button("Site da ONG Passos Mágicos","https://passosmagicos.org.br/",type="secondary")
-        #st.link_button("Streamlit App", "/",type="secondary")
+        st.link_button("Streamlit App", "https://data-ong-pmagicos.streamlit.app",type="secondary")
