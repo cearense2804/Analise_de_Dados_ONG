@@ -591,7 +591,7 @@ with st.container():
     with col21:   
         st.write("☞ ONG Passos Mágicos")
         st.write("")
-        #st.write("☞ Streamlit App: ")       
+        st.write("☞ Streamlit App: ")       
     with col22:
         st.link_button("Site da ONG Passos Mágicos","https://passosmagicos.org.br/",type="secondary")
         st.link_button("Streamlit App", "https://data-ong-pmagicos.streamlit.app",type="secondary")
