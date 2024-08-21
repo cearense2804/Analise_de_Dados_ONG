@@ -595,13 +595,3 @@ with st.container():
     with col22:
         st.link_button("Site da ONG Passos Mágicos","https://passosmagicos.org.br/",type="secondary")
         st.link_button("Streamlit App", "https://data-ong-pmagicos.streamlit.app",type="secondary")
-st.write(" ")
-st.container():
-  col1, col2, col3 = st.columns([2,6,2])
-  with col1:
-    st.write(" ")
-  with col2:
-    st.write("Elaborado por Ana Karoline Medeiros e Sousa")
-  with col3:
-    st.write(" ")
-st.write("Elaborado por Ana Karoline Medeiros e Sousa)
