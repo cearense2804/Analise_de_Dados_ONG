@@ -65,7 +65,7 @@ with col6:
     st.write("")
 
 
-#Hisória
+#História
 
 
 st.subheader("", divider="orange")
@@ -87,7 +87,7 @@ with st.container():
 
         A Associação realizou a Pesquisa Extensiva do Desenvolvimento Educacional-PEDE durante os anos de 2020 a 2022, a fim de sistematizar as suas ações sociais e registrar de forma rigorosa seus processos. O PEDE aglutina indicadores e informações que fornecem subsídios para análise de dados e proposição de estratégias de melhoria da promoção educacional dos alunos. 
 
-        Com a presente análise de dados, propormos um olhar diferenciado sobre os dados obtidos, além de trazer proposições que visem aprimorar o grandioso trabalho da ONG a fim de transformar cada vez mais vidas com o seu projeto inovador.
+        Com a presente análise de dados realizada por esta aluna de pós graduação em Data Analytics da FIAP, Ana Karoline Medeiros e Sousa, propus um olhar diferenciado sobre os dados obtidos, além de trazer proposições que visem aprimorar o grandioso trabalho da ONG a fim de transformar cada vez mais vidas com o seu projeto inovador.
 
         """
         st.write(paragrafo2)
@@ -584,7 +584,7 @@ def analise_aluno(num):
               st.write(f"☞  No gráfico ao lado, podemos visualizar a previsão de incremento dos indicadores do PEDE para o aluno ID {id_aluno}. A partir dessa percepção indicativa, poderemos traçar rotas alternativas que viabilizem a melhora individualizada do aluno, bem como evitar que um possível decréscimo  dos índices ocorra. Pelo fato de indicador possuir atributos definidos e determinados para a sua ponderação, isso facilitaria o foco dos profissionais a fim de promover melhora especializada.")
         
 analise_aluno(num)
-
+st.write(" Trabalho elaborado por Ana Karoline Medeiros e Sousa ")
 st.markdown('##### Links:')
 with st.container():
     col21, col22 = st.columns([3,7])   
