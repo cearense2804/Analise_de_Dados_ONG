@@ -584,7 +584,7 @@ def analise_aluno(num):
               st.write(f"☞  No gráfico ao lado, podemos visualizar a previsão de incremento dos indicadores do PEDE para o aluno ID {id_aluno}. A partir dessa percepção indicativa, poderemos traçar rotas alternativas que viabilizem a melhora individualizada do aluno, bem como evitar que um possível decréscimo  dos índices ocorra. Pelo fato de indicador possuir atributos definidos e determinados para a sua ponderação, isso facilitaria o foco dos profissionais a fim de promover melhora especializada.")
         
 analise_aluno(num)
-st.write(" Trabalho elaborado por Ana Karoline Medeiros e Sousa ")
+
 st.markdown('##### Links:')
 with st.container():
     col21, col22 = st.columns([3,7])   
@@ -596,3 +596,8 @@ with st.container():
         st.link_button("Site da ONG Passos Mágicos","https://passosmagicos.org.br/",type="secondary")
         st.link_button("Streamlit App", "https://data-ong-pmagicos.streamlit.app",type="secondary")
 
+st.write("")
+st.write("")
+st.write("                                                                         Trabalho elaborado por Ana Karoline Medeiros e Sousa ")
+st.write("")
+st.write("")
