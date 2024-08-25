@@ -87,7 +87,7 @@ with st.container():
 
         A Associação realizou a Pesquisa Extensiva do Desenvolvimento Educacional-PEDE durante os anos de 2020 a 2022, a fim de sistematizar as suas ações sociais e registrar de forma rigorosa seus processos. O PEDE aglutina indicadores e informações que fornecem subsídios para análise de dados e proposição de estratégias de melhoria da promoção educacional dos alunos. 
 
-        Com a presente análise de dados realizada por esta aluna de pós graduação em Data Analytics da FIAP, Ana Karoline Medeiros e Sousa, propus um olhar diferenciado sobre os dados obtidos, além de trazer proposições que visem aprimorar o grandioso trabalho da ONG a fim de transformar cada vez mais vidas com o seu projeto inovador.
+        Com a presente análise de dados, realizada por esta aluna de pós graduação em Data Analytics da FIAP- Ana Karoline Medeiros e Sousa, propus um olhar diferenciado sobre os dados obtidos, além de trazer proposições que visem aprimorar o grandioso trabalho da ONG a fim de transformar cada vez mais vidas com o seu projeto inovador.
 
         """
         st.write(paragrafo2)
