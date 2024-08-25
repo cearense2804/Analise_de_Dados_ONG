@@ -598,6 +598,6 @@ with st.container():
 
 st.write("")
 st.write("")
-st.write("                                                                         Trabalho elaborado por Ana Karoline Medeiros e Sousa ")
+st.write(" Trabalho elaborado por Ana Karoline Medeiros e Sousa ")
 st.write("")
 st.write("")
